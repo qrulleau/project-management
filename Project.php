@@ -4,17 +4,15 @@ require_once('Host.php');
 
 
     class Project{
-        public function __construct(
-        private int $id,
-        private string $name,
-        private string $code,
-        private string $lastpass_folder,
-        private string $link_mock_ups,
-        private bool $managed_server,
-        private string $notes,
-        private Customer $customer_id,
-        private Host $host_id
-        )
+        private int $id;
+        private string $name;
+        private string $code;
+        private string $lastpass_folder;
+        private string $link_mock_ups;
+        private bool $managed_server;
+        private string $notes;
+        private Customer $customer_id;
+        private Host $host_id;
 
         public function getId(): int 
         {
@@ -66,7 +64,7 @@ require_once('Host.php');
             $this->link_mock_ups= $link_mock_ups;
         }
 
-        public function setManaged_server(): bool
+        public function getManaged_server(): bool
         {
             return $this->managed_server;
         }

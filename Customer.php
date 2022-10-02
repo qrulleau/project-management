@@ -1,12 +1,12 @@
 <?php
 
-    class Customer{
-        public function __construct(
-        private int $id,
-        private string $code,
-        private string $name,
-        private string $note,
-        )
+    class Customer
+    {
+        private int $id;
+        private string $code;
+        private string $name;
+        private string $note;
+        
 
         public function getId(): int 
         {
