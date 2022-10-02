@@ -1,20 +1,18 @@
 <?php
-require_once('Customer.php'),
-require_once('Host.php'),
+require_once('Customer.php');
+require_once('Host.php');
 
 
-    class Projet{
-        public function __construct(
-        private int $id,
-        private string $name,
-        private string $code,
-        private string $lastpass_folder,
-        private string $link_mock_ups,
-        private bool $managed_server,
-        private string $notes,
-        private Customer $customer_id,
-        private Host $host_id
-        )
+    class Project{
+        private int $id;
+        private string $name;
+        private string $code;
+        private string $lastpass_folder;
+        private string $link_mock_ups;
+        private bool $managed_server;
+        private string $notes;
+        private Customer $customer_id;
+        private Host $host_id;
 
         public function getId(): int 
         {
@@ -66,7 +64,7 @@ require_once('Host.php'),
             $this->link_mock_ups= $link_mock_ups;
         }
 
-        public function setManaged_server(): bool
+        public function getManaged_server(): bool
         {
             return $this->managed_server;
         }
@@ -86,22 +84,22 @@ require_once('Host.php'),
             $this->notes= $notes;
         }
 
-        public function getHost_id(): int 
+        public function getHost_id(): Host 
         {
             return $this->host_id;
         }
 
-        public function setHost_id( int $host_id ): void
+        public function setHost_id( Host $host_id ): void
         {
             $this->host_id= $host_id;
         }
 
-        public function getCustomer_id(): int 
+        public function getCustomer_id(): Customer 
         {
             return $this->customer_id;
         }
 
-        public function setCustomer_id ( int $customer_id): int
+        public function setCustomer_id ( Customer $customer_id): void
         {
             $this->customer_id = $customer_id;
         }
