@@ -13,7 +13,7 @@
             return $this->id;
         }
 
-        public function setId( int id): void
+        public function setId( int $id): void
         {
             $this->id = $id;
         }
@@ -23,7 +23,7 @@
             return $this->code;
         }
 
-        public function setCode( string code): void
+        public function setCode( string $code): void
         {
             $this->code = $code;
         }
@@ -33,7 +33,7 @@
             return $this->name;
         }
 
-        public function setName( string name): void
+        public function setName( string $name): void
         {
             $this->name = $name;
         }
@@ -43,7 +43,7 @@
             return $this->note;
         }
 
-        public function setNote(string note): void
+        public function setNote(string $note): void
         {
             $this->note = $note;
         }
