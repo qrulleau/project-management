@@ -1,15 +1,26 @@
 <?php
 
-require_once 'Host.php';
 require_once 'Customer.php';
+require_once 'Host.php';
 
 class Contact
 {
+	private int $id;
 	private string $email;
 	private string $phone_number;
 	private string $role;
-	private Host $host_id;
-	private Customer $customer_id;
+	private Customer $customer;
+	private Host $host;
+
+	public function getId(): int 
+	{
+		return $this->id;
+	}
+
+	public function setId(int $id): void
+	{
+		$this->id = $id;
+	}
 
 	public function getEmail(): string
 	{
@@ -40,20 +51,24 @@ class Contact
 	{
 		$this->role = $role;
 	}
-	public function getHostId(): Host
+
+	public function getCustomer(): Customer
 	{
-		return $this->host_id;
+		return $this->customer;
 	}
-	public function setHostId(Host $host_id): void
+
+	public function setCustomer (Customer $customer): void
 	{
-		$this->host_id = $host_id;
+		$this->customer = $customer;
 	}
-	public function getCustomerId(): Customer
+
+	public function getHost(): Host 
 	{
-		return $this->customer_id;
+		return $this->host;
 	}
-	public function setCustomerId(Customer $customer_id): void
+
+	public function setHost (Host $host): void
 	{
-		$this->customer_id = $customer_id;
+		$this->host = $host;
 	}
 }
