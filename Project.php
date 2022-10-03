@@ -4,7 +4,6 @@ require_once('Customer.php');
 require_once('Host.php');
 
 class Project{
-    private int $id;
     private string $name;
     private string $code;
     private string $lastpass_folder;
@@ -14,15 +13,6 @@ class Project{
     private Customer $customer;
     private Host $host;
 
-    public function getId(): int 
-    {
-        return $this->id;
-    }
-
-    public function setId(int $id): void
-    {
-        $this->id= $id;
-    }
 
     public function getName(): string 
     {

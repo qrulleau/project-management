@@ -2,20 +2,10 @@
 
 class Host
 {
-	private int $id;
 	private string $code;
 	private string $name;
 	private string $notes;
-
-	public function getId(): int 
-	{
-		return $this->id;
-	}
-
-	public function setId(int $id): void
-	{
-		$this->id = $id;
-	}
+	
 
 	public function getCode(): string
 	{
