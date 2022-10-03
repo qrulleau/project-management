@@ -4,9 +4,8 @@ require_once 'Project.php';
 
 class Environment
 {
-	private int $id;
 	private string $name;
-	private string $ip_adress;
+	private string $ip_address;
 	private int $ssh_port;
 	private string $ssh_username;
 	private string $phpmyadmin_link;
@@ -44,9 +43,9 @@ class Environment
 		return $this->ip_restriction;
 	}
 
-	public function getIPAdress(): string
+	public function getIPAddress(): string
 	{
-		return $this->ip_adress;
+		return $this->ip_address;
 	}
 
 	public function setProject(Project $project): void
@@ -59,9 +58,9 @@ class Environment
 		$this->name = $name;
 	}
 
-	public function setIPAdress(int $ip_adress): void
+	public function setIPAddress(int $ip_address): void
 	{
-		$this->ip_adress = $ip_adress;
+		$this->ip_address = $ip_address;
 	}
 
 	public function setSSHName(string $ssh_username): void
