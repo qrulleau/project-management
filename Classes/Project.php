@@ -21,7 +21,7 @@ class Project{
 
     public function setName(string $name): void
     {
-        $this->name= $name;
+        $this->name = $name;
     }
 
     public function getCode(): string 
@@ -31,7 +31,7 @@ class Project{
 
     public function setCode(string $code): void
     {
-        $this->code= $code;
+        $this->code = $code;
     }
 
     public function getLastpass_folder(): string 
@@ -41,7 +41,7 @@ class Project{
 
     public function setLastpass_folder(string $lastpass_folder): void
     {
-        $this->lastpass_folder= $lastpass_folder;
+        $this->lastpass_folder = $lastpass_folder;
     }
 
     public function getLink_mock_ups(): string 
@@ -51,7 +51,7 @@ class Project{
 
     public function setLink_mock_ups(string $link_mock_ups): void
     {
-        $this->link_mock_ups= $link_mock_ups;
+        $this->link_mock_ups = $link_mock_ups;
     }
 
     public function getManaged_server(): bool
@@ -71,7 +71,7 @@ class Project{
 
     public function setNotes(string $notes): void
     {
-        $this->notes= $notes;
+        $this->notes = $notes;
     }
 
     public function getHost(): Host 

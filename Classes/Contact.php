@@ -12,6 +12,15 @@ class Contact
 	private Host $host;
     
 
+    public function __construct(string $email, string $phone_number, string $role, Customer $customer, Host $host)
+    {
+        $this->email = $email;
+        $this->phone_number = $phone_number;
+        $this->role = $role;
+        $this->customer = $customer;
+        $this->host = $host;
+    }
+
 	public function getEmail(): string
 	{
 		return $this->email;
