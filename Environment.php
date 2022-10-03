@@ -19,11 +19,6 @@ class Environment
 		return $this->name;
 	}
 
-	public function getID(): int
-	{
-		return $this->id;
-	}
-
 	public function getProject(): Project
 	{
 		return $this->project;
@@ -62,11 +57,6 @@ class Environment
 	public function setName(string $name): void
 	{
 		$this->name = $name;
-	}
-
-	public function setID(int $id): void
-	{
-		$this->id = $id;
 	}
 
 	public function setIPAdress(int $ip_adress): void
