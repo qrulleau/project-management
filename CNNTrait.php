@@ -1,6 +1,6 @@
 <?php
 
-trait CnnTrait
+trait CnnTrait 
 {
     private string $code;
     private string $name;

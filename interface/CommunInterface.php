@@ -2,5 +2,5 @@
 
 interface CommunInterface{
   public function getName(): string;
-  public function setName(): void;
+  public function setName(string $name): void;
 }
