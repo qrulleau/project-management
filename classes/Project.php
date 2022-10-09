@@ -2,8 +2,9 @@
 
 require_once('Customer.php');
 require_once('Host.php');
+require 'interface/CommunInterface.php';
 
-class Project{
+class Project implements CommunInterface{
     private string $name;
     private string $code;
     private string $lastpass_folder;
