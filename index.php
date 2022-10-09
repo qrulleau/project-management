@@ -57,8 +57,8 @@
           <div class="d-flex footer-content">
             <p>resultat page</p>
             <div class="d-flex">
-              <a class="btn empty" href="">Exporter</a>
-              <a class="btn" href="">Ajouter</a>
+              <a class="btn empty" href="#">Exporter</a>
+              <a class="btn" href="#">Ajouter</a>
             </div>
           </div>
       </div>
