@@ -1,8 +1,8 @@
 <?php
 
-require_once 'CNNTrait.php';
+require_once '../traits/Trait.php';
 
 class Host
 {
-	use CnnTrait;
+	use CodeNameNotesTrait;
 }

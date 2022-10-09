@@ -1,10 +1,11 @@
 <?php
 
-require_once('Customer.php');
-require_once('Host.php');
-require 'interface/CommunInterface.php';
+require_once 'Customer.php';
+require_once 'Host.php';
+require '../interface/CommonInterface.php';
 
-class Project implements CommunInterface{
+class Project implements CommonInterface
+{
     private string $name;
     private string $code;
     private string $lastpass_folder;
