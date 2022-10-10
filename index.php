@@ -1,14 +1,10 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project page management</title>
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/hamburger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,14 +26,17 @@
             <div class="background-content white">
                 <div class="row">
                     <div class="d-flex">
-                        <div class="col col-name">
+                    <div class="col col-name d-flex">
                             <h3>Nom</h3>
+                            <i data-feather="arrow-down"></i>
                         </div>
-                        <div class="col col-customer">
+                        <div class="col col-customer d-flex">
                             <h3>Client</h3>
+                            <i data-feather="arrow-down"></i>
                         </div>
-                        <div class="col col-host">
+                        <div class="col col-host d-flex">
                             <h3>Hebergeur</h3>
+                            <i data-feather="arrow-down"></i>
                         </div>
                     </div>
                 </div>
@@ -64,6 +63,9 @@
             </div>
         </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
+    <script src="script/main.js"></script>
 </body>
 </html>
 
