@@ -1,9 +1,9 @@
 <?php
 
-require_once 'CNNTrait.php';
-require 'interface/CommunInterface.php';
+require_once '../traits/Trait.php';
+require '../interface/CommonInterface.php';
 
-class Customer implements CommunInterface
+class Customer implements CommonInterface
 {
-	use CnnTrait;
+	use CodeNameNotesTrait;
 }

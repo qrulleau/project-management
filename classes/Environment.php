@@ -1,9 +1,9 @@
 <?php
 
 require_once 'Project.php';
-require 'interface/CommunInterface.php';
+require '../interface/CommonInterface.php';
 
-class Environment implements CommunInterface
+class Environment implements CommonInterface
 {
 	private string $name;
 	private string $ip_address;
