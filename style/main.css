@@ -95,7 +95,7 @@ header img {
   font-weight: 500;
 }
 .nav-bar a:hover {
-  background-color: black;
+  background-color: var(--primary-color);
   color: var(--secondary-color);
   transition: 350ms;
 }
@@ -117,7 +117,7 @@ h2 {
   margin-bottom: 20px;
 }
 .col {
-  padding: 12px 0px 12px 15px;
+  padding: 12px 15px;
   background-color: var(--sinary-color);
 }
 .col-name {
@@ -148,6 +148,9 @@ h2 {
   justify-content: center;
   padding-left: 0;
 }
+.input .col-customer {
+  border-left: 1px solid var(--secondary-color);
+}
 .content .input .col-name,
 .content .input .col-host,
 .content .input .col-customer {
@@ -171,4 +174,19 @@ h2 {
 }
 .footer-content .d-flex {
   gap: 16px;
+}
+.icon {
+  gap: 12px;
+}
+.d-none {
+  display: none;
+}
+.new-width {
+  width: 124px !important;
+}
+.new-width1 {
+  width: 91vw;
+}
+.feather-arrow-down {
+  stroke: white;
 }
