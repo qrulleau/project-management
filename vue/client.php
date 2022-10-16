@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>client page management</title>
+    <title>host page management</title>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/hamburger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,44 +25,123 @@
         require __DIR__ . '../../component/nav.php';  
         ?>
         <section class="content">
-            <h2>Nouveau Client</h2>
+            <h2>Nouveau client</h2>
+            <div class="d-flex justify-start selector">
+              <button class="selector-btn selector-btn-active" value="general-information">Informations generales</button>
+              <button class="selector-btn " value="contact">Contacts</button>
+            </div>
             <div class="background-content white new-width1">
-                <div class="row">
-                    <div class="d-flex">
-                        <div class="col col-name d-flex">
-                            <h3>Nom</h3>
-                            <i data-feather="arrow-down"></i>
+              <section id="general-information" class="content-section active-content">
+                <form method="POST">
+                  <div class="d-flex justify-start align-start">
+                    <div class="label">
+                      <label>Nom <span>*</span></label>
+                    </div>
+                    <input type="text" placeholder="nom*">
+                  </div>
+                  <div class="d-flex justify-start align-start">
+                    <div class="label">
+                      <label for="Nom">Code interne</label>
+                    </div>
+                    <input type="text" placeholder="nom*">
+                  </div>
+                  <div class="d-flex justify-start align-start">
+                    <div class="label">
+                      <label for="Nom">Note / remarques</label>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                </form>
+              </section>
+              <section id="contact" class="content-section ">
+                <div class="contact">
+                  <div class="d-flex header-contact">
+                    <h3>Thibault Tremel</h3>
+                    <a href="#" class="delete">
+                      <div class="d-flex"><i data-feather="trash"></i>Supprimer</div>
+                    </a>    
+                  </div>
+                  <div class="d-flex">
+                      <div class="d-flex direction-column">
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Nom du contact<span>*</span></label>
+                          </div>
+                          <input type="text">
                         </div>
-                        <div class="col col-customer d-flex">
-                            <h3>Client</h3>
-                            <i data-feather="arrow-down"></i>
-                        </div>
-                        <div class="col col-host d-flex">
-                            <h3>Hebergeur</h3>
-                            <i data-feather="arrow-down"></i>
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Email</label>
+                          </div>
+                          <input type="text">
                         </div>
                     </div>
-                </div>
-                <div class="row input">
-                    <div class="d-flex">
-                        <div class="col col-name">
-                            <input type="text">
+                    <div class="d-flex direction-column">
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Role</label>
+                          </div>
+                          <input type="text">
                         </div>
-                        <div class="col col-customer">
-                            <input type="text">
-                        </div>
-                        <div class="col col-host">
-                            <input type="text">
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Telephone</label>
+                          </div>
+                          <input type="text">
                         </div>
                     </div>
-                </div>
-                <div class="d-flex footer-content">
-                    <p>resultat page</p>
-                    <div class="d-flex">
-                        <a class="btn empty" href="">Exporter</a>
-                        <a class="btn" href="">Ajouter</a>
                     </div>
                 </div>
+                <div class="contact">
+                  <div class="d-flex header-contact">
+                    <h3>Thibault Tremel</h3>
+                    <a href="#" class="delete">
+                      <div class="d-flex"><i data-feather="trash"></i>Supprimer</div>
+                    </a>    
+                  </div>
+                  <div class="d-flex">
+                      <div class="d-flex direction-column">
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Nom du contact<span>*</span></label>
+                          </div>
+                          <input type="text">
+                        </div>
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Email</label>
+                          </div>
+                          <input type="text">
+                        </div>
+                    </div>
+                    <div class="d-flex direction-column">
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Role</label>
+                          </div>
+                          <input type="text">
+                        </div>
+                        <div class="d-flex">
+                          <div class="label">
+                            <label>Telephone</label>
+                          </div>
+                          <input type="text">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <a href="#" class="add">
+                  <div class="d-flex justify-start">
+                    <i data-feather="plus"></i>Ajouter un contact
+                  </div>
+                </a>
+              </section>
+              <div class="d-flex footer-content justify-end">
+                  <div class="d-flex">
+                      <a class="btn empty" href="">Annuler</a>
+                      <a class="btn" href="">Ajouter</a>
+                  </div>
+              </div>
             </div>
         </section>
     </div>
