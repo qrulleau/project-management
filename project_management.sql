@@ -69,17 +69,17 @@ INSERT INTO `environment` (`name`, `link`, `ip_address`, `ssh_port`, `ssh_userna
 ('', 'c:un/chemin/absolue/Banque2', '', 80, 'LCL', 'ns90.wistee.fr', 1, 9),
 ( 'Scolaire', 'c:un/chemin/absolue/Scolaire-St-vincent', 'ip_address10', 80, 'lycee_st_vincent', 'ns010.wistee.fr', 1, 10);
 
-INSERT INTO `customer` (`id`, `code`, `name`, `notes`) VALUES
-(1, "CUST_SALON_DE_L'AGRICULTURE", "Salon de l'agriculture", "Client : Salon de l'Agriculture"),
-(2, "CUST_SAINT-GOBAIN", "Saint-Gobain", "Client : Saint-Gobain"),
-(3, "CUST_KWS", "KWS", "Client : KWS"),
-(4, "CUST_POCLAIN_HYDRAULICS", "Poclain Hydraulics", "Client : Poclain_Hydraulics"),
-(5, "CUST_PMU", "PMU", "Client : PMU"),
-(6, "CUST_PHILIPS", "Philips", "Client : Philips"),
-(7, "CUST_ORPI", "Orpi", "Client : Orpi"),
-(8, "CUST_MINISTÈRE_DE_L'INTERIEUR", "Ministère de l'Emploi et de la Solidarité", "Client : Ministère de l'Intérieur"),
-(9, "CUST_INTERMARCHÉ", "Intermarché", "Client : Intermarché"),
-(10, "CUST_IPSEC", "IPSEC", "Client : IPSEC");
+INSERT INTO `customer` (`code`, `name`, `notes`) VALUES
+("CUST_SALON_DE_L'AGRICULTURE", "Salon de l'agriculture", "Client : Salon de l'Agriculture"),
+("CUST_SAINT-GOBAIN", "Saint-Gobain", "Client : Saint-Gobain"),
+("CUST_KWS", "KWS", "Client : KWS"),
+("CUST_POCLAIN_HYDRAULICS", "Poclain Hydraulics", "Client : Poclain_Hydraulics"),
+("CUST_PMU", "PMU", "Client : PMU"),
+("CUST_PHILIPS", "Philips", "Client : Philips"),
+("CUST_ORPI", "Orpi", "Client : Orpi"),
+("CUST_MINISTÈRE_DE_L'INTERIEUR", "Ministère de l'Emploi et de la Solidarité", "Client : Ministère de l'Intérieur"),
+("CUST_INTERMARCHÉ", "Intermarché", "Client : Intermarché"),
+("CUST_IPSEC", "IPSEC", "Client : IPSEC");
 
 INSERT INTO `host` (`code`, `name`, `notes`) VALUES
 ('host_testeur', '', 'note sur testeur'),
@@ -106,10 +106,10 @@ INSERT INTO `project` (`name`, `code`, `lastpass_folder`, `link_mock_ups`, `mana
 ('', 'code_project9', '', '0', 0, 'notes_project9', 9, 9),
 ('twitch_asset', 'twitch_ass', '', '1', 0, 'notes_project10', 10, 10);
 
-INSERT INTO `contact` (`id`, `email`, `phone_number`, `role`, `host_id`, `customer_id`) VALUES
+INSERT INTO `contact` (`email`, `phone_number`, `role`, `host_id`, `customer_id`) VALUES
 ('jacquelotjeff@gmail.com', '0624252629', 'CTO', 1, 1),
 ('contact@lyceestvincent.fr', '0611111111', 'surveillant', 2, 2),
-('', '0622222222', null, 3, 2),
+('', '0622222222', '', 3, 2),
 ('quentin.rulleau@yahooc.com', '0786176266', 'ceo', 4, 4),
 ('dev@pongo.com', '0644444444', 'front-end dev front', 3, 1),
 ('julien@nodevo.fr', '0655555555', 'testeur', 7, 6),

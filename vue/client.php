@@ -1,6 +1,19 @@
 <?php
-    $page = "customer";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
     require_once '../autoloader.php';
+    require_once __DIR__ . '../../classes/InsertCustomer.php';
+    require_once __DIR__ . '../../classes/DisplayCustomers.php';
+    $displayCustomer = new DisplayCustomers;
+    $displayCustomer->displayAllCustomer();
+
+    $insertCustomer = new InsertCustomer;
+
+    $insertCustomer->addCustomer();
+
+    $page = "customer";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +46,7 @@
             </div>
             <div class="background-content white new-width1">
                 <section id="general-information" class="content-section active-content">
-                    <form method="POST" action="../classes/InsertClient.php">
+                    <form method="POST">
                         <div class="d-flex justify-start align-start">
                             <div class="label">
                                 <label>Nom <span>*</span></label>
@@ -56,82 +69,56 @@
                     </form>
                 </section>
                 <section id="contact" class="content-section">
+
+                    <?php
+                        foreach ($customers as $customer) {
+                            
+                    ?>
+
                     <div class="contact">
                         <div class="d-flex header-contact">
-                            <h3>Thibault Tremel</h3>
-                            <a href="#" class="delete">
-                                <div class="d-flex"><i data-feather="trash"></i>Supprimer</div>
-                            </a>    
+                            <h3><?php echo $customer['name']?></h3>
+                            <div class="d-flex action">
+                                <?php
+                                echo "<a href='../vue/updateCustomer/updateCustomer.php?id=" . $customer['id'] . "' class='d-flex update'>"
+                                ?>
+                                    <div class="d-flex"><i data-feather="edit-3"></i>Modifier</div>
+                                </a>
+                                <a href="#" class="delete">
+                                    <div class="d-flex"><i data-feather="trash"></i>Supprimer</div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex align-start">
                             <div class="d-flex direction-column">
                                 <div class="d-flex">
                                     <div class="label">
-                                        <label>Nom du contact<span>*</span></label>
+                                        <label>Nom du client<span>*</span></label>
                                     </div>
-                                    <input type="text">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="label">
-                                        <label>Email</label>
-                                    </div>
-                                    <input type="text">
+                                    <input type="text" value="<?php echo $customer['name']?>">
                                 </div>
                             </div>
                             <div class="d-flex direction-column">
                                 <div class="d-flex">
                                     <div class="label">
-                                        <label>Role</label>
+                                        <label>Code</label>
                                     </div>
-                                    <input type="text">
+                                    <input type="text" value="<?php echo $customer['code']?>">
                                 </div>
                                 <div class="d-flex">
                                     <div class="label">
-                                        <label>Telephone</label>
+                                        <label>Notes</label>
                                     </div>
-                                    <input type="text">
+                                    <input type="text" value="<?php echo $customer['notes']?>">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="contact">
-                        <div class="d-flex header-contact">
-                            <h3>Thibault Tremel</h3>
-                            <a href="#" class="delete">
-                                <div class="d-flex"><i data-feather="trash"></i>Supprimer</div>
-                            </a>    
-                        </div>
-                        <div class="d-flex">
-                            <div class="d-flex direction-column">
-                                <div class="d-flex">
-                                    <div class="label">
-                                        <label>Nom du contact<span>*</span></label>
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="label">
-                                        <label>Email</label>
-                                    </div>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="d-flex direction-column">
-                                <div class="d-flex">
-                                    <div class="label">
-                                        <label>Role</label>
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="label">
-                                        <label>Telephone</label>
-                                    </div>
-                                    <input type="text">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <?php
+                        }
+                    ?>
+                    
                     <a href="#" class="add">
                         <div class="d-flex justify-start">
                             <i data-feather="plus"></i>Ajouter un contact

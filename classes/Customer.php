@@ -1,9 +1,10 @@
 <?php
 
 require_once '../traits/Trait.php';
-require '../interface/CommonInterface.php';
+require '../interface/NameInterface.php';
+require 'ConnexionDB.php';
 
-class Customer implements CommonInterface
+class Customer implements NameInterface
 {
 	use CodeNameNotesTrait;
 }

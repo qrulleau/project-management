@@ -2,9 +2,9 @@
 
 require_once 'Customer.php';
 require_once 'Host.php';
-require '../interface/CommonInterface.php';
+require '../interface/NameInterface.php';
 
-class Project implements CommonInterface
+class Project implements NameInterface
 {
     private string $name;
     private string $code;
