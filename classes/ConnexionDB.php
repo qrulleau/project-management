@@ -15,8 +15,13 @@ class ConnexionDB {
       $this->databaseName = $databaseName;
     }
 
-    public function connexion(): PDO
+    public function connexion(): void
     {
-      return $dbh = new PDO('mysql:host=' . $this->server . ';dbname='.$this->databaseName. '', $this->user, $this->password);
+      try {
+        $dataBaseConnexion = new PDO('mysql:host=' . $this->server . ';dbname='.$this->databaseName. '', $this->user, $this->password);
+      } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage() . "<br/>";
+        die();
+      }
     }
 }

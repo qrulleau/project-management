@@ -48,6 +48,7 @@ table {
   --quinary-color : #999999;
   --sinary-color : #BBBBBB;
   --septenary-color : #EEEEEE;
+  --octonary-color :#D2430A;
 }
 a {
   text-decoration: none;
@@ -69,6 +70,9 @@ body {
 }
 .justify-start {
   justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .align-start {
   align-items: flex-start;
@@ -95,7 +99,7 @@ header img {
   font-weight: 500;
 }
 .nav-bar a:hover {
-  background-color: black;
+  background-color: var(--primary-color);
   color: var(--secondary-color);
   transition: 350ms;
 }
@@ -117,7 +121,7 @@ h2 {
   margin-bottom: 20px;
 }
 .col {
-  padding: 12px 0px 12px 15px;
+  padding: 12px 15px;
   background-color: var(--sinary-color);
 }
 .col-name {
@@ -136,17 +140,19 @@ h2 {
   color: var(--secondary-color);
   font-weight: 500;
 }
-.content input {
-  width: 92%;
+.content .input input {
+  width: 100vw;
   border: none;
 }
 .content .col-name input {
-  width: 96%;
+  width: 100vw;
 }
 .content .input .col {
   display: flex;
   justify-content: center;
-  padding-left: 0;
+}
+.input .col-customer {
+  border-left: 1px solid var(--secondary-color);
 }
 .content .input .col-name,
 .content .input .col-host,
@@ -156,19 +162,148 @@ h2 {
 .footer-content {
   padding: 20px 15px;
 }
+.selector {
+  gap: 8px;
+}
 .btn {
   background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
   color: white;
   padding: 12px 20px;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
 }
+.selector-btn {
+  padding: 16px 28px;
+  border: none;
+  background-color: var(--septenary-color);
+  color: var(--quinary-color);
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+.selector-btn:hover {
+  text-decoration: underline var(--quinary-color);
+  transition: 500ms;
+}
+.selector-btn-active {
+  background-color: var(--secondary-color);
+}
+.btn:hover {
+  background-color: transparent;
+  transition: 400ms;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
 .empty {
   background-color: transparent !important;
   border: 1px solid var(--primary-color) !important;
   color: var(--primary-color);
 }
+.empty:hover {
+  background-color: var(--primary-color) !important;
+  transition: 350ms;
+  color: var(--secondary-color);
+}
 .footer-content .d-flex {
   gap: 16px;
+}
+.icon {
+  gap: 12px;
+}
+.d-none {
+  display: none;
+}
+.new-width {
+  width: 124px !important;
+}
+.new-width1 {
+  width: 91vw;
+}
+.feather-arrow-down {
+  stroke: white;
+}
+.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.content-section {
+  display: none;
+  padding: 40px 32px;
+  margin-bottom: 24vh;
+}
+.content-section form .d-flex {
+  gap: 40px;
+}
+.content-section form > .d-flex {
+  margin-bottom: 12px;
+}
+.content-section form .d-flex .label {
+  margin-top: 8px;
+}
+.content-section form input {
+  padding: 8px;
+}
+.active-content {
+  display: block !important;
+}
+label {
+  width: 8vw;
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+}
+label span {
+  color: var(--primary-color);
+}
+a.delete {
+  padding: 8px 12px;
+  background-color: var(--octonary-color);
+}
+a.delete .d-flex {
+  gap: 8px;
+  color: var(--secondary-color);
+}
+.contact {
+  border: 1px solid var(--primary-color);
+  padding: 32px 16px;
+  margin-bottom: 20px;
+}
+.contact h3 {
+  color: var(--primary-color);
+  text-transform: inherit;
+  font-size: 20px;
+  font-weight: 600;
+}
+.contact .direction-column {
+  gap: 12px;
+}
+.header-contact {
+  margin-bottom: 20px;
+}
+.contact .direction-column label {
+  width: 12vw;
+  font-size: 18px;
+  font-weight: 500;
+} 
+.contact input {
+  padding: 8px 12px;
+  width: 25vw;
+}
+.add {
+  width: 11vw;
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 13px 11px;
+  font-weight: 500;
+}
+.add .d-flex {
+  gap: 8px;
+}
+#contact {
+  margin-bottom: inherit;
 }

@@ -1,5 +1,5 @@
 <?php
-    $page = "home";
+    $page = "project";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project page management</title>
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/hamburger.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/hamburger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet"> 
@@ -17,12 +17,12 @@
 <body>
 
     <?php
-    require __DIR__ . '/component/header.php';  
+    require __DIR__ . '../../component/header.php';  
     ?>
 
     <div class="d-flex align-start justify-start">
         <?php
-        require __DIR__ . '/component/nav.php';  
+        require __DIR__ . '../../component/nav.php';  
         ?>
         <section class="content">
             <h2>Nouveau Projet</h2>
@@ -68,7 +68,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>feather.replace()</script>
-    <script src="script/main.js"></script>
+    <script src="../script/main.js"></script>
 </body>
 </html>
 
