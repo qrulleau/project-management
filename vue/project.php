@@ -1,5 +1,5 @@
 <?php
-    $page = "customer";
+    $page = "project";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>client page management</title>
+    <title>Project page management</title>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/hamburger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
         require __DIR__ . '../../component/nav.php';  
         ?>
         <section class="content">
-            <h2>Nouveau Client</h2>
+            <h2>Nouveau Projet</h2>
             <div class="background-content white new-width1">
                 <div class="row">
                     <div class="d-flex">
-                        <div class="col col-name d-flex">
+                    <div class="col col-name d-flex">
                             <h3>Nom</h3>
                             <i data-feather="arrow-down"></i>
                         </div>
