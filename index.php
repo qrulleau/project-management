@@ -1,3 +1,6 @@
+<?php
+    $page = "home";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +26,7 @@
         ?>
         <section class="content">
             <h2>Nouveau Projet</h2>
-            <div class="background-content white">
+            <div class="background-content white new-width1">
                 <div class="row">
                     <div class="d-flex">
                     <div class="col col-name d-flex">
