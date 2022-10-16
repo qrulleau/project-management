@@ -41,16 +41,16 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `email`, `phone_number`, `role`, `host_id`, `customer_id`) VALUES
-(1, 'email1', '0600000000', 'role1', 1, 1),
-(2, 'email2', '0611111111', 'role2', 2, 2),
-(3, 'email3', '0622222222', 'role3', 3, 3),
-(4, 'email4', '0633333333', 'role4', 4, 4),
-(5, 'email5', '0644444444', 'role5', 5, 5),
-(6, 'email6', '0655555555', 'role6', 6, 6),
-(7, 'email7', '0666666666', 'role7', 7, 7),
-(8, 'email8', '0677777777', 'role8', 8, 8),
-(9, 'email9', '0688888888', 'role9', 9, 9),
-(10, 'email10', '0699999999', 'role10', 10, 10);
+(1, 'jacquelotjeff@gmail.com', '0600000000', '', 1, 1),
+(2, '', '0611111111', 'user', 2, 2),
+(3, 'email3', '0622222222', 'user', 3, 2),
+(4, 'email4', '0633333333', 'user', 4, 4),
+(5, 'email5', '0644444444', 'user', 3, 1),
+(6, 'email6', '0655555555', 'user', 7, 6),
+(7, 'email7', '0666666666', 'user', 7, 7),
+(8, 'email8', '0677777777', 'user', 4, 3),
+(9, 'email9', '0688888888', 'user', 10, 10),
+(10, 'email10', '0699999999', 'user', 10, 10);
 
 -- --------------------------------------------------------
 
@@ -70,16 +70,16 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `code`, `name`, `notes`) VALUES
-(1, 'code1', 'name1', 'notes1'),
-(2, 'code2', 'name2', 'notes2'),
-(3, 'code3', 'name3', 'notes3'),
-(4, 'code4', 'name4', 'notes4'),
-(5, 'code5', 'name5', 'notes5'),
-(6, 'code6', 'name6', 'notes6'),
-(7, 'code7', 'name7', 'notes7'),
-(8, 'code8', 'name8', 'notes8'),
-(9, 'code9', 'name9', 'notes9'),
-(10, 'code10', 'name10', 'notes10');
+(1, "CUST_SALON_DE_L'AGRICULTURE", "Salon de l'agriculture", "Client : Salon de l'Agriculture"),
+(2, "CUST_SAINT-GOBAIN", "Saint-Gobain", "Client : Saint-Gobain"),
+(3, "CUST_KWS", "KWS", "Client : KWS"),
+(4, "CUST_POCLAIN_HYDRAULICS", "Poclain Hydraulics", "Client : Poclain_Hydraulics"),
+(5, "CUST_PMU", "PMU", "Client : PMU"),
+(6, "CUST_PHILIPS", "Philips", "Client : Philips"),
+(7, "CUST_ORPI", "Orpi", "Client : Orpi"),
+(8, "CUST_MINISTÈRE_DE_L'INTERIEUR", "Ministère de l'Emploi et de la Solidarité", "Client : Ministère de l'Intérieur"),
+(9, "CUST_INTERMARCHÉ", "Intermarché", "Client : Intermarché"),
+(10, "CUST_IPSEC", "IPSEC", "Client : IPSEC");
 
 -- --------------------------------------------------------
 
