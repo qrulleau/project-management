@@ -1,10 +1,10 @@
 <div class="background">
     <div class="d-flex direction-column align-start nav-bar">
-        <a href="#" class="d-flex new-width justify-start icon <?php echo ($page == "dashboard" ? "active" : "" ) ?>">
+        <a href="http://localhost/project-management/index.php" class="d-flex new-width justify-start icon <?php echo ($page == "home" ? "active" : "" ) ?>">
             <i data-feather="home"></i>
             <p class="nav-text d-none">Tableau de bord</p>
         </a>
-        <a href="http://localhost/project-management/" class="d-flex new-width justify-start icon <?php echo ($page == "project" ? "active" : "" ) ?>">
+        <a href="http://localhost/project-management/vue/project.php" class="d-flex new-width justify-start icon <?php echo ($page == "project" ? "active" : "" ) ?>">
             <i data-feather="folder"></i>
             <p class="nav-text d-none">Projets</p>
         </a>
