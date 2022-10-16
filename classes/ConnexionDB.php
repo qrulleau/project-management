@@ -18,6 +18,7 @@ class ConnexionDB {
     public function connexion(): void
     {
       try {
+        global $dataBaseConnexion;
         $dataBaseConnexion = new PDO('mysql:host=' . $this->server . ';dbname='.$this->databaseName. '', $this->user, $this->password);
       } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
