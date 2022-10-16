@@ -1,14 +1,14 @@
+//select element on the page
 const hamburger = document.querySelector('.hamburger');
 const text_navbar = document.querySelectorAll('.nav-text');
 const nav = document.querySelectorAll('.icon');
 const content = document.querySelector('.background-content');
 const button_selector = document.querySelectorAll('.selector-btn');
 
-
-
+//listening event on the hamburger element.
 hamburger.addEventListener('click', () => {
-  console.log('Bonjour');
   hamburger.classList.toggle('is-active');
+//loop on hamburger node element to display entire nav / resize content
   text_navbar.forEach(element => {
     element.classList.toggle('d-none')
   });
