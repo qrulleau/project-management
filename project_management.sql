@@ -42,7 +42,7 @@ CREATE TABLE `contact` (
 
 INSERT INTO `contact` (`id`, `email`, `phone_number`, `role`, `host_id`, `customer_id`) VALUES
 (1, 'jacquelotjeff@gmail.com', '0600000000', '', 1, 1),
-(2, '@gmail.com', '0611111111', 'user', 2, 2),
+(2, '', '0611111111', 'user', 2, 2),
 (3, 'email3', '0622222222', 'user', 3, 2),
 (4, 'email4', '0633333333', 'user', 4, 4),
 (5, 'email5', '0644444444', 'user', 3, 1),
