@@ -63,6 +63,9 @@ body {
   font-family: 'Poppins', sans-serif;
   scrollbar-color: var(--primary-color);
 }
+.text-center {
+  text-align: center;
+}
 .d-flex {
   display: flex;
   justify-content: space-between;
@@ -259,13 +262,29 @@ label {
 label span {
   color: var(--primary-color);
 }
+/* a.delete:hover {
+  background-color: var(--secondary-color);
+  color: var(--octonary-color);
+  transition: 400ms;
+} */
+.action {
+  gap: 12px;
+}
 a.delete {
   padding: 8px 12px;
   background-color: var(--octonary-color);
 }
+a.update {
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
 a.delete .d-flex {
   gap: 8px;
   color: var(--secondary-color);
+}
+a.update .d-flex {
+  gap: 8px;
 }
 .contact {
   border: 1px solid var(--primary-color);
@@ -306,4 +325,7 @@ a.delete .d-flex {
 }
 #contact {
   margin-bottom: inherit;
+}
+.update h1 {
+  margin-bottom: 30px;
 }
