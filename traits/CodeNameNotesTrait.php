@@ -1,5 +1,7 @@
 <?php
 
+namespace Traits;
+
 trait CodeNameNotesTrait
 {
     private string $code;

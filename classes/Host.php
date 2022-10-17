@@ -2,9 +2,7 @@
 
 namespace Classes;
 
-use \Traits\CodeTrait;
-use \Traits\NameTrait;
-use \Traits\NotesTrait;
+use Traits\CodeNameNotesTrait;
 
 class Host
 {
