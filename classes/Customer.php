@@ -2,10 +2,8 @@
 
 namespace Classes;
 
-use \Traits\CodeTrait;
-use \Traits\NameTrait;
-use \Traits\NotesTrait;
-use \Interface\NameInterface;
+use Interface\NameInterface;
+use Traits\CodeNameNotesTrait;
 
 
 class Customer implements NameInterface

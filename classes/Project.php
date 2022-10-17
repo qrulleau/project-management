@@ -5,7 +5,7 @@ namespace Classes;
 use Classes\Customer;
 use Classes\Host;
 
-use \Interface\NameInterface;
+use Interface\NameInterface;
 
 
 class Project implements NameInterface
