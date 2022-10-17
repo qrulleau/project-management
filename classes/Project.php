@@ -1,8 +1,12 @@
 <?php
 
-require_once 'Customer.php';
-require_once 'Host.php';
-require '../interface/NameInterface.php';
+namespace Classes;
+
+use Classes\Customer;
+use Classes\Host;
+
+use \Interface\NameInterface;
+
 
 class Project implements NameInterface
 {
