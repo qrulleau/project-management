@@ -1,7 +1,10 @@
 <?php
 
-require_once 'Project.php';
-require '../interface/NameInterface.php';
+namespace Classes;
+
+use Classes\Project;
+
+use \Interface\NameInterface;
 
 class Environment implements NameInterface
 {

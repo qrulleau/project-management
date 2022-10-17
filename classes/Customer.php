@@ -1,8 +1,12 @@
 <?php
 
-require_once '../traits/Trait.php';
-require '../interface/NameInterface.php';
-require 'ConnexionDB.php';
+namespace Classes;
+
+use \Traits\CodeTrait;
+use \Traits\NameTrait;
+use \Traits\NotesTrait;
+use \Interface\NameInterface;
+
 
 class Customer implements NameInterface
 {
