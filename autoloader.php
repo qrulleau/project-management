@@ -10,6 +10,12 @@ class Autoloader
                 $class = substr_replace($classe, 'classes', 0, 3);
                 $class = __DIR__.'\\'.$class;
             }
+
+            if (strpos($classe, 'App\\') === 0)
+            {
+                $class = substr_replace($classe, 'interface', 0, 3);
+                $class = __DIR__.'\\'.$class;
+            }
             
             $file = str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php';
             if (file_exists($file)) {

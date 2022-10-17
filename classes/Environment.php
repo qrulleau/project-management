@@ -3,8 +3,7 @@
 namespace Classes;
 
 use Classes\Project;
-
-use \Interface\NameInterface;
+use Interface\NameInterface;
 
 class Environment implements NameInterface
 {
