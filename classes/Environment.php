@@ -1,7 +1,10 @@
 <?php
 
-require_once 'Project.php';
-require '../interface/CommonInterface.php';
+namespace Classes;
+
+use Classes\Project;
+
+use \Interface\CommonInterface;
 
 class Environment implements CommonInterface
 {
