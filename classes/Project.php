@@ -4,60 +4,51 @@ namespace Classes;
 
 use Classes\Customer;
 use Classes\Host;
-
+use Interface\IdInterface;
+use Interface\CodeInterface;
 use Interface\NameInterface;
+use Interface\NotesInterface;
+use Traits\IdTrait;
+use Traits\CodeTrait;
+use Traits\NameTrait;
+use Traits\NotesTrait;
 
 
-class Project implements NameInterface
+class Project implements IdInterface, CodeInterface, NameInterface, NotesInterface
 {
-    private string $name;
-    private string $code;
-    private string $lastpass_folder;
-    private string $link_mock_ups;
-    private bool $managed_server;
-    private string $notes;
-    private Customer $customer;
-    private Host $host;
+	use IdTrait, CodeTrait, NameTrait, NotesTrait;
 
-
-    public function getName(): string 
+    public function __construct(
+        private int $id,
+        private string $name,
+        private string $code,
+        private ?string $lastpass_folder,
+        private ?string $link_mock_ups,
+        private bool $managed_server,
+        private ?string $notes,
+        private Host $host,
+        private Customer $customer)
     {
-        return $this->name;
     }
 
-    public function setName(string $name): void
-    {
-        $this->name= $name;
-    }
-
-    public function getCode(): string 
-    {
-        return $this->code;
-    }
-
-    public function setCode(string $code): void
-    {
-        $this->code= $code;
-    }
-
-    public function getLastpass_folder(): string 
+    public function getLastpass_folder(): ?string 
     {
         return $this->lastpass_folder;
     }
 
     public function setLastpass_folder(string $lastpass_folder): void
     {
-        $this->lastpass_folder= $lastpass_folder;
+        $this->lastpass_folder = $lastpass_folder;
     }
 
-    public function getLink_mock_ups(): string 
+    public function getLink_mock_ups(): ?string 
     {
         return $this->lastpass_folder;
     }
 
     public function setLink_mock_ups(string $link_mock_ups): void
     {
-        $this->link_mock_ups= $link_mock_ups;
+        $this->link_mock_ups = $link_mock_ups;
     }
 
     public function getManaged_server(): bool
@@ -68,16 +59,6 @@ class Project implements NameInterface
     public function setManaged_server(bool $managed_server): void
     {
         $this->managed_server = $managed_server;
-    }
-
-    public function getNotes(): string 
-    {
-        return $this->notes;
-    }
-
-    public function setNotes(string $notes): void
-    {
-        $this->notes= $notes;
     }
 
     public function getHost(): Host 
@@ -98,5 +79,10 @@ class Project implements NameInterface
     public function setCustomer(Customer $customer): void
     {
         $this->customer = $customer;
+    }
+
+    public function __toString()
+    {
+        return $this->id;
     }
 }

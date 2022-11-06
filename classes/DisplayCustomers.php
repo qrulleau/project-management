@@ -14,7 +14,6 @@ class DisplayCustomers {
         $query = $dataBaseConnexion->prepare("SELECT * FROM customer");
         $query->execute();
         $customers = $query->fetchAll();
-        
     }
     
     public function displayCustomer(){
@@ -28,6 +27,5 @@ class DisplayCustomers {
         $query = $dataBaseConnexion->prepare("SELECT * FROM customer where id = ?");
         $query->execute(array($id));
         $customer = $query->fetch();
-        
     }
 }
