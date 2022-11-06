@@ -2,14 +2,15 @@
 
 require_once 'ConnexionDB.php';
 
-class UpdateCustomer {
-    public function updateCustomer () {
+class UpdateCustomer
+{
+    public function updateCustomer()
+    {
         require 'CheckForm.php';
 
         $checkForm = new CheckForm;
 
         global $dataBaseConnexion,$customer;
-
 
         $id = $customer['id'];
 
@@ -17,7 +18,8 @@ class UpdateCustomer {
 
         $db->connexion();
 
-        if (isset($_POST["submit"])){
+        if (isset($_POST["submit"]))
+        {
             $statusMsg = ''; 
             if (isset($_POST['name'], $_POST['notes']))
             {        
@@ -27,18 +29,18 @@ class UpdateCustomer {
                 $notes = $_POST['notes'];
                 $notes = $checkForm->checkInput($notes);
 
-                $querie = ("UPDATE customer SET name = ?, notes = ? WHERE id = $id");
-                $statement = $dataBaseConnexion->prepare($querie);
+                $query = ("UPDATE customer SET name = ?, notes = ? WHERE id = $id");
+                $statement = $dataBaseConnexion->prepare($query);
                 $statement->execute(array($name,$notes));
 
-                if ($querie) {
+                if ($query) {
                     header('location: ../client.php');
                 } else {
-                    $statusMsg = "veuillez saisir des donnees correctes";
+                    $statusMsg = "Veuillez saisir des donnees correctes";
                 }
 
             } else { 
-            $statusMsg = 'test'; 
+                $statusMsg = 'test'; 
             }
         }
     }

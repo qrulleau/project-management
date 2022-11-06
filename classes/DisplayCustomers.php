@@ -2,10 +2,11 @@
 
 require_once 'ConnexionDB.php';
 
-class DisplayCustomers {
+class DisplayCustomers
+{
     
-    public function displayAllCustomer(){
-        
+    public function displayAllCustomer()
+    {
         global $dataBaseConnexion,$customers;
         
         $db = new connexionDB('localhost', '', 'root', 'project_management');
@@ -16,7 +17,8 @@ class DisplayCustomers {
         $customers = $query->fetchAll();
     }
     
-    public function displayCustomer(){
+    public function displayCustomer()
+    {
         global $dataBaseConnexion,$customer;
 
         $id = $_GET['id'];
