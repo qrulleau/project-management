@@ -3,8 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once '../autoloader.php';
-require_once __DIR__ . '../../classes/InsertCustomer.php';
-require_once __DIR__ . '../../classes/DisplayCustomers.php';
+require_once __DIR__ . '../../customer/InsertCustomer.php';
+require_once __DIR__ . '../../customer/DisplayCustomers.php';
 $displayCustomer = new DisplayCustomers;
 $displayCustomer->displayAllCustomer();
 
