@@ -1,12 +1,12 @@
 <?php
 
-require_once 'ConnexionDB.php';
+require_once '../classes/ConnexionDB.php';
 
 class UpdateCustomer
 {
     public function updateCustomer()
     {
-        require 'CheckForm.php';
+        require '../classes/CheckForm.php';
 
         $checkForm = new CheckForm;
 

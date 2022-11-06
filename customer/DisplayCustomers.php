@@ -1,6 +1,6 @@
 <?php
 
-require_once 'ConnexionDB.php';
+require_once '../classes/ConnexionDB.php';
 
 class DisplayCustomers
 {
