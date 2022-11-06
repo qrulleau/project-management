@@ -3,10 +3,13 @@
 namespace Classes;
 
 use Interface\NameInterface;
-use Traits\CodeNameNotesTrait;
-
+use Traits\CodeTrait;
+use Traits\NameTrait;
+use Traits\NotesTrait;
 
 class Customer implements NameInterface
 {
-	use CodeNameNotesTrait;
+	use CodeTrait;
+	use NameTrait;
+	use NotesTrait;
 }

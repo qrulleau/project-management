@@ -8,7 +8,7 @@ class DisplayCustomers {
         
         global $dataBaseConnexion,$customers;
         
-        $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
+        $db = new connexionDB('localhost', '', 'root', 'project_management');
         $db->connexion();
         
         $query = $dataBaseConnexion->prepare("SELECT * FROM customer");

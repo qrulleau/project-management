@@ -13,7 +13,7 @@ class UpdateCustomer {
 
         $id = $customer['id'];
 
-        $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
+        $db = new connexionDB('localhost', 'root', '', 'project_management');
 
         $db->connexion();
 

@@ -6,7 +6,7 @@ class InsertCustomer {
     public function addCustomer () {
         global $dataBaseConnexion;
 
-        $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
+        $db = new connexionDB('localhost', '', 'root', 'project_management');
 
         $db->connexion();
 
