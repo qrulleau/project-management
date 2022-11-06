@@ -2,26 +2,26 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-    require_once '../autoloader.php';
-    require_once __DIR__ . '../../classes/InsertCustomer.php';
-    require_once __DIR__ . '../../classes/DisplayCustomers.php';
-    $displayCustomer = new DisplayCustomers;
-    $displayCustomer->displayAllCustomer();
+require_once '../autoloader.php';
+require_once __DIR__ . '../../classes/InsertCustomer.php';
+require_once __DIR__ . '../../classes/DisplayCustomers.php';
+$displayCustomer = new DisplayCustomers;
+$displayCustomer->displayAllCustomer();
 
-    $insertCustomer = new InsertCustomer;
+$insertCustomer = new InsertCustomer;
 
-    $insertCustomer->addCustomer();
+$insertCustomer->addCustomer();
 
-    $page = "customer";
-
+$page = "customer";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client page management</title>
+    <title>Customer page management</title>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/hamburger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,8 +71,7 @@ error_reporting(E_ALL);
                 <section id="contact" class="content-section">
 
                     <?php
-                        foreach ($customers as $customer) {
-                            
+                    foreach ($customers as $customer) {       
                     ?>
 
                     <div class="contact">

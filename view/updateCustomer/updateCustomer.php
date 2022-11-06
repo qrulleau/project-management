@@ -2,8 +2,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require '../../classes/DisplayCustomers.php';
-require '../../classes/UpdateCustomer.php';
+require '../../customer/DisplayCustomers.php';
+require '../../customer/UpdateCustomer.php';
 
 $displayCustomer = new DisplayCustomers;
 
