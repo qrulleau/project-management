@@ -2,15 +2,18 @@
 
 require_once 'ConnexionDB.php';
 
-class InsertCustomer {
-    public function addCustomer () {
+class InsertCustomer
+{
+    public function addCustomer()
+    {
         global $dataBaseConnexion;
 
-        $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
+        $db = new connexionDB('localhost', '', 'root', 'project_management');
 
         $db->connexion();
 
-        if (isset($_POST["submit"])){
+        if (isset($_POST["submit"]))
+        {
             $statusMsg = ''; 
             if (isset($_POST['name'], $_POST['notes']))
             {        
@@ -23,18 +26,18 @@ class InsertCustomer {
                 $notes = $_POST['notes'];
                 $notes = $checkForm->checkInput($notes);
 
-                $querie = ('insert into customer (name, notes) VALUES (?,?)');
-                $statement = $dataBaseConnexion->prepare($querie);
+                $query = ('insert into customer (name, notes) VALUES (?,?)');
+                $statement = $dataBaseConnexion->prepare($query);
                 $statement->execute(array($name,$notes));
 
-                
-                if ($querie) {
+                if ($query)
+                {
                     header("Location: ../index.php");
                 } else {
                     $statusMsg = "Veuillez saisir des donnees correctes";
                 }
             } else { 
-            $statusMsg = 'test'; 
+                $statusMsg = 'test'; 
             }
         }
     }

@@ -3,23 +3,31 @@
 namespace Classes;
 
 use Classes\Project;
-
+use Interface\IdInterface;
 use Interface\NameInterface;
+use Traits\IdTrait;
+use Traits\NameTrait;
 
-class Environment implements NameInterface
+class Environment implements IdInterface, NameInterface
 {
-	private string $name;
-	private string $ip_address;
-	private int $ssh_port;
-	private string $ssh_username;
-	private string $phpmyadmin_link;
-	private bool $ip_restriction;
-	private Project $project;
+	use IdInterface, NameInterface;
 
+	public function __construct(
+        private int $id,
+        private string $name,
+        private ?string $link,
+        private ?string $ip_address,
+        private ?int $ssh_port,
+        private ?string $ssh_username,
+        private ?string $phpmyadmin_link,
+        private bool $ip_restriction,
+        private Project $project)
+    {
+    }
 
-	public function getName(): string
+	public function getLink(): ?string
 	{
-		return $this->name;
+		return $this->link;
 	}
 
 	public function getProject(): Project
@@ -27,17 +35,17 @@ class Environment implements NameInterface
 		return $this->project;
 	}
 
-	public function getSSHPort(): int
+	public function getSSHPort(): ?int
 	{
 		return $this->ssh_port;
 	}
 
-	public function getSSHUserName(): string
+	public function getSSHUserName(): ?string
 	{
 		return $this->ssh_username;
 	}
 
-	public function getPHPAdminLink(): string
+	public function getPHPAdminLink(): ?string
 	{
 		return $this->phpmyadmin_link;
 	}
@@ -47,19 +55,19 @@ class Environment implements NameInterface
 		return $this->ip_restriction;
 	}
 
-	public function getIPAddress(): string
+	public function getIPAddress(): ?string
 	{
 		return $this->ip_address;
+	}
+
+	public function setLink(string $link): void
+	{
+		$this->link = $link;
 	}
 
 	public function setProject(Project $project): void
 	{
 		$this->project = $project;
-	}
-
-	public function setName(string $name): void
-	{
-		$this->name = $name;
 	}
 
 	public function setIPAddress(int $ip_address): void
@@ -85,5 +93,10 @@ class Environment implements NameInterface
 	public function setIPRestriction(bool $ip_restriction): void
 	{
 		$this->ip_restriction = $ip_restriction;
-	}	
+	}
+
+	public function __toString()
+    {
+        return $this->id;
+    }
 }

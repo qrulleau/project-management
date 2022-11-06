@@ -2,7 +2,8 @@
 
 namespace Interface;
 
-interface NameInterface{
+interface nameInterface
+{
     public function getName(): string;
     public function setName(string $string): void;
 }
