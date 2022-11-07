@@ -4,15 +4,18 @@ namespace Classes;
 
 use Classes\Customer;
 use Classes\Host;
+use Interfaces\IdInterface;
+use Traits\IdTrait;
 
-class Contact
+class Contact implements IdInterface
 {
+	use IdTrait;
+
 	private string $email;
 	private string $phone_number;
 	private string $role;
-	private Customer $customer;
-	private Host $host;
-    
+	private ?Customer $customer;
+	private ?Host $host;
 
 	public function getEmail(): string
 	{
@@ -44,7 +47,7 @@ class Contact
 		$this->role = $role;
 	}
 
-	public function getCustomer(): Customer
+	public function getCustomer(): ?Customer
 	{
 		return $this->customer;
 	}
@@ -54,7 +57,7 @@ class Contact
 		$this->customer = $customer;
 	}
 
-	public function getHost(): Host 
+	public function getHost(): ?Host 
 	{
 		return $this->host;
 	}

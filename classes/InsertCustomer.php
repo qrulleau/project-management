@@ -5,15 +5,18 @@ namespace Classes;
 use Classes\ConnexionDB;
 use Classes\CheckForm;
 
-class InsertCustomer {
-    public function addCustomer () {
+class InsertCustomer
+{
+    public function addCustomer()
+    {
         global $dataBaseConnexion;
 
         $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
 
         $db->connexion();
 
-        if (isset($_POST["submit"])){
+        if (isset($_POST["submit"]))
+        {
             $statusMsg = ''; 
             if (isset($_POST['name'], $_POST['notes']))
             {        
@@ -29,8 +32,8 @@ class InsertCustomer {
                 $statement = $dataBaseConnexion->prepare($querie);
                 $statement->execute(array($name,$notes));
 
-                
-                if ($querie) {
+                if ($querie)
+                {
                     header("Location: ../index.php");
                 } else {
                     $statusMsg = "Veuillez saisir des donnees correctes";

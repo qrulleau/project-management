@@ -14,14 +14,12 @@ class ConnexionDB {
 
     public static function  connexion(): void
     {
-
-
-      try {
-        global $dataBaseConnexion;
-        $dataBaseConnexion = new PDO('mysql:host=' . self::$server . ';dbname='. self::$databaseName . '', self::$user , self::$password);
-      } catch (PDOException $e) {
-        print "Erreur !: " . $e->getMessage() . "<br/>";
-        die();
-      }
+        try {
+            global $dataBaseConnexion;
+            $dataBaseConnexion = new PDO('mysql:host=' . self::$server . ';dbname='. self::$databaseName . '', self::$user , self::$password);
+        } catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+        }
     }
 }

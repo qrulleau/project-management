@@ -1,32 +1,31 @@
 <?php
 
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL);
 
-    ini_set('display_errors', 1); 
-    ini_set('display_startup_errors', 1); 
-    error_reporting(E_ALL);
+require_once '../autoloader.php';
 
-    require_once '../autoloader.php';
-
-    use Classes\InsertProject;
-    use Classes\DisplayProject;
-    use Classes\DisplayCustomer;
-    use Classes\DisplayHost;
-  
+use Classes\InsertProject;
+use Classes\DisplayProject;
+use Classes\DisplayCustomer;
+use Classes\DisplayHost;
 
 
-    $displayProject = new DisplayProject;
-    $displayProject->displayAllProject();
 
-    $displayCustomer = new DisplayCustomer;
-    $displayCustomer->displayAllCustomer();
+$displayProject = new DisplayProject;
+$displayProject->displayAllProject();
 
-    $displayHost = new DisplayHost;
-    $displayHost->displayAllHost();
+$displayCustomer = new DisplayCustomer;
+$displayCustomer->displayAllCustomer();
 
-    $insertProject = new InsertProject;
-    $insertProject->addProject();
+$displayHost = new DisplayHost;
+$displayHost->displayAllHost();
 
-    $page = "project";
+$insertProject = new InsertProject;
+$insertProject->addProject();
+
+$page = "project";
 
 ?>
 <!DOCTYPE html>
