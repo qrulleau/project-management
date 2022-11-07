@@ -1,32 +1,31 @@
 <?php
 
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL);
 
-    ini_set('display_errors', 1); 
-    ini_set('display_startup_errors', 1); 
-    error_reporting(E_ALL);
+require_once '../autoloader.php';
 
-    require_once '../autoloader.php';
-
-    use Classes\InsertHost;
-    use Classes\DisplayProject;
-    use Classes\DisplayCustomer;
-    use Classes\DisplayHost;
-  
+use Classes\InsertHost;
+use Classes\DisplayProject;
+use Classes\DisplayCustomer;
+use Classes\DisplayHost;
 
 
-    $displayProject = new DisplayProject;
-    $displayProject->displayAllProject();
 
-    $displayHost = new DisplayHost;
-    $displayHost->displayAllHost();
+$displayProject = new DisplayProject;
+$displayProject->displayAllProject();
 
-    $displayHost = new DisplayHost;
-    $displayHost->displayAllHost();
+$displayHost = new DisplayHost;
+$displayHost->displayAllHost();
 
-    $insertHost = new InsertHost;
-    $insertHost->addHost();
+$displayHost = new DisplayHost;
+$displayHost->displayAllHost();
 
-    $page = "host";
+$insertHost = new InsertHost;
+$insertHost->addHost();
+
+$page = "host";
 
 ?>
 <!DOCTYPE html>

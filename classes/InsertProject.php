@@ -5,15 +5,18 @@ namespace Classes;
 use Classes\ConnexionDB;
 use Classes\CheckForm;
 
-class InsertProject {
-    public function addProject () {
+class InsertProject
+{
+    public function addProject()
+    {
         global $dataBaseConnexion,$statusMsg;
 
         $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
 
         $db->connexion();
 
-        if (isset($_POST["submit"])){
+        if (isset($_POST["submit"]))
+        {
             $statusMsg = ''; 
             if (isset($_POST['name'], $_POST['notes']))
             {        
@@ -28,7 +31,6 @@ class InsertProject {
                 $customer_id = $_POST['customer_id'];
                 $customer_id = $checkForm->checkInput($customer_id);
 
-
                 $host_id = $_POST['host_id'];
                 $host_id = $checkForm->checkInput($host_id);
 
@@ -41,9 +43,9 @@ class InsertProject {
                 $querie = ('insert into project (name, notes, customer_id, host_id, lastpass_folder, link_mock_ups) VALUES (?,?,?,?,?,?)');
                 $statement = $dataBaseConnexion->prepare($querie);
                 $statement->execute(array($name, $notes, $customer_id, $host_id, $lastPass, $sketchLink));
-
                 
-                if ($querie) {
+                if ($querie)
+                {
                     header("Location: ../index.php");
                 } else {
                     $statusMsg = "Veuillez saisir des donnees correctes";

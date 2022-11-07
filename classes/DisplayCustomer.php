@@ -4,10 +4,10 @@ namespace Classes;
 
 use Classes\ConnexionDB;
 
-class DisplayCustomer {
-    
-    public function displayAllCustomer(){
-        
+class DisplayCustomer
+{    
+    public function displayAllCustomer()
+    {        
         global $dataBaseConnexion,$customers;
         
         $db = new connexionDB('localhost', 'root', 'qrulleau', 'project_management');
@@ -16,10 +16,10 @@ class DisplayCustomer {
         $query = $dataBaseConnexion->prepare("SELECT * FROM customer");
         $query->execute();
         $customers = $query->fetchAll();
-        
     }
     
-    public function displayCustomer(){
+    public function displayCustomer()
+    {
         global $dataBaseConnexion,$customer;
 
         $id = $_GET['id'];
@@ -30,6 +30,5 @@ class DisplayCustomer {
         $query = $dataBaseConnexion->prepare("SELECT * FROM customer where id = ?");
         $query->execute(array($id));
         $customer = $query->fetch();
-        
     }
 }

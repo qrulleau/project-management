@@ -2,11 +2,21 @@
 
 namespace Classes;
 
+use Interface\IdInterface;
+use Interface\CodeInterface;
 use Interface\NameInterface;
-use Traits\CodeNameNotesTrait;
+use Interface\NotesInterface;
+use Traits\IdTrait;
+use Traits\CodeTrait;
+use Traits\NameTrait;
+use Traits\NotesTrait;
 
-
-class Customer implements NameInterface
+class Customer implements IdInterface, CodeInterface, NameInterface, NotesInterface
 {
-	use CodeNameNotesTrait;
+	use IdTrait, CodeTrait, NameTrait, NotesTrait;
+
+    public function __toString()
+    {
+        return $this->id;
+    }
 }

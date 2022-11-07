@@ -3,13 +3,13 @@
 use Classes\ConnexionDB;
 use Classes\CheckForm;
 
-class UpdateCustomer {
-    public function updateCustomer () {
-
+class UpdateCustomer
+{
+    public function updateCustomer()
+    {
         $checkForm = new CheckForm;
 
         global $dataBaseConnexion,$customer;
-
 
         $id = $customer['id'];
 
@@ -17,7 +17,8 @@ class UpdateCustomer {
 
         $db->connexion();
 
-        if (isset($_POST["submit"])){
+        if (isset($_POST["submit"]))
+        {
             $statusMsg = ''; 
             if (isset($_POST['name'], $_POST['notes']))
             {        
@@ -31,12 +32,12 @@ class UpdateCustomer {
                 $statement = $dataBaseConnexion->prepare($querie);
                 $statement->execute(array($name,$notes));
 
-                if ($querie) {
+                if ($querie)
+                {
                     header('location: ../client.php');
                 } else {
                     $statusMsg = "veuillez saisir des donnees correctes";
                 }
-
             } else { 
             $statusMsg = 'test'; 
             }

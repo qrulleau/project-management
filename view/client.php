@@ -1,21 +1,22 @@
 <?php
 
-    require_once '../autoloader.php';
+require_once '../autoloader.php';
 
-    use Classes\InsertCustomer;
-    use Classes\DisplayCustomer;
+use Classes\InsertCustomer;
+use Classes\DisplayCustomer;
 
 
-    $displayCustomer = new DisplayCustomer;
-    $displayCustomer->displayAllCustomer();
+$displayCustomer = new DisplayCustomer;
+$displayCustomer->displayAllCustomer();
 
-    $insertCustomer = new InsertCustomer;
+$insertCustomer = new InsertCustomer;
 
-    $insertCustomer->addCustomer();
+$insertCustomer->addCustomer();
 
-    $page = "customer";
+$page = "customer";
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,8 +73,7 @@
                 <section id="contact" class="content-section">
 
                     <?php
-                        foreach ($customers as $customer) {
-                            
+                        foreach ($customers as $customer) {                
                     ?>
 
                     <div class="contact">
