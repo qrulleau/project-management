@@ -1,6 +1,9 @@
 <?php
 
-require_once 'ConnexionDB.php';
+namespace Classes;
+
+use Classes\ConnexionDB;
+use Classes\CheckForm;
 
 class InsertCustomer {
     public function addCustomer () {
@@ -14,7 +17,6 @@ class InsertCustomer {
             $statusMsg = ''; 
             if (isset($_POST['name'], $_POST['notes']))
             {        
-                require 'CheckForm.php';
                 $checkForm = new CheckForm;
 
                 $name = $_POST['name'];

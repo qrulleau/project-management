@@ -1,4 +1,5 @@
 <?php
+    require 'autoloader.php';
     $page = "home";
 ?>
 <!DOCTYPE html>

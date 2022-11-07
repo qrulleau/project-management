@@ -1,10 +1,10 @@
 <?php
 
-require_once 'ConnexionDB.php';
+use Classes\ConnexionDB;
+use Classes\CheckForm;
 
 class UpdateCustomer {
     public function updateCustomer () {
-        require 'CheckForm.php';
 
         $checkForm = new CheckForm;
 

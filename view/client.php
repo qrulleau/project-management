@@ -1,11 +1,12 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
     require_once '../autoloader.php';
-    require_once __DIR__ . '../../classes/InsertCustomer.php';
-    require_once __DIR__ . '../../classes/DisplayCustomers.php';
-    $displayCustomer = new DisplayCustomers;
+
+    use Classes\InsertCustomer;
+    use Classes\DisplayCustomer;
+
+
+    $displayCustomer = new DisplayCustomer;
     $displayCustomer->displayAllCustomer();
 
     $insertCustomer = new InsertCustomer;
@@ -80,7 +81,7 @@ error_reporting(E_ALL);
                             <h3><?php echo $customer['name']?></h3>
                             <div class="d-flex action">
                                 <?php
-                                echo "<a href='../vue/updateCustomer/updateCustomer.php?id=" . $customer['id'] . "' class='d-flex update'>"
+                                echo "<a href='../view/updateCustomer/updateCustomer.php?id=" . $customer['id'] . "' class='d-flex update'>"
                                 ?>
                                     <div class="d-flex"><i data-feather="edit-3"></i>Modifier</div>
                                 </a>

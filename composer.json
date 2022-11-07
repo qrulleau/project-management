@@ -1,0 +1,13 @@
+{
+    "name": "qrulleau/project-management",
+    "authors": [
+        {
+            "name": "qrulleau",
+            "email": "quentin.rulleau@yahoo.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/psr7": "^2.4",
+        "psr/log": "^3.0"
+    }
+}
